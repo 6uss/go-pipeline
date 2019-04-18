@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/6uss/go-pipeline"]
     env: ["PROJECT_ROOT=github.com/6uss/go-pipeline"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/carbon-octane-237001/go-pipeline:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/swe-ci-cd/go-pipeline:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/carbon-octane-237001/go-pipeline:$REVISION_ID"
+  - "gcr.io/swe-ci-cd/go-pipeline:$REVISION_ID"
